@@ -1,43 +1,51 @@
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Blue: hsl(223, 87%, 63%)
-
-### Secondary
-
-- Pale Blue: hsl(223, 100%, 88%)
-- Light Red: hsl(354, 100%, 66%)
-
-### Neutral
-
-- Gray: hsl(0, 0%, 59%)
-- Very Dark Blue: hsl(209, 33%, 12%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 20px
-
-### Fonts
-
-- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
-- Weights: 300, 600, 700
-
-## Icons
-
-For the social icons, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bing | ComingSoon</title>
+    <script
+      src="https://kit.fontawesome.com/bb8e411a96.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="flex container">
+      <img class="logo" src="./images/logo.svg" alt="PING logo" />
+      <h1 class="title">We are launching <span class="bold">soon!</span></h1>
+      <h2 class="subtitle">Subscribe and get notified</h2>
+      <form class="form flex" action="get">
+        <input placeholder="Your email address..." type="email" />
+        <span class="after">Please provide a valid email address</span>
+        <button type="submit">Notify Me</button>
+      </form>
+      <img
+        class="image"
+        src="./images/illustration-dashboard.png"
+        alt="dashboard illustration of charts"
+      />
+      <footer class="flex">
+        <div class="media flex">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>&copy; Copywright Ping. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>

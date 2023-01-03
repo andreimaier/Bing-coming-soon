@@ -1,0 +1,203 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+/* html {
+    color-scheme: dark light;
+} */
+/* html, body {
+    height: 100%;
+} */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+p {
+    line-height: 1.5;
+}
+img, video, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --hoverBlue: #c2d3ff;
+    --errorRed: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --veryDarkBlue: hsl(209, 33%, 12%);
+    --font: 'Libre Franklin', sans-serif;
+    --size: 20px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    
+    font-family: var(--font);
+}
+.container {
+
+    height: 100%;
+    flex-direction: column;  
+}
+.logo {
+    margin-top: 8rem;
+    width: 5.5rem;
+}
+
+.title {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--gray);
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+}
+.bold {
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+.subtitle {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--veryDarkBlue);
+}
+
+.form {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.form input,
+.form button {
+    width: 75vw;
+    padding-block: 1.3rem;
+    padding-inline: 2rem;
+    border-radius: 50px;
+    
+    font-weight: 300;
+    
+}
+.form input {
+    border: 1px solid var(--hoverBlue);
+}
+.after {  
+    margin-bottom: 2rem;
+}
+
+
+.form input::placeholder {
+    color: var(--gray);
+    font-size: 1.2rem;
+}
+.form button {
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0px 10px 20px 0px var(--hoverBlue);
+}
+button:hover {
+    background-color: hsla(223, 87%, 63%, 0.673);;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.image {
+    
+    margin-top: 7rem;
+    margin-bottom: 12rem;
+    max-width: 80%;
+}
+footer {
+    margin-bottom: 4rem; 
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--gray)
+}
+.media {
+    gap: 1.2rem;
+}
+.media i {
+    font-size: 1.4rem;
+    color: var(--blue);
+    border: 2px solid var(--hoverBlue);
+    border-radius: 50%;
+    padding: 0.9rem;
+}
+
+.media i:first-child {
+    aspect-ratio: 1/0.6;
+    text-align: center;
+}
+.media i:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+@media screen and (min-width: 62em) {
+    .logo {
+        margin-top: 5rem;
+        width: 4.5rem;
+    }
+    .title {
+        margin-top: 2.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 2.3rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    .form {
+        flex-direction: row;
+        width: 35rem;
+    }
+    .form input,
+    .form button {
+        
+        padding-block: 0.8rem;
+        padding-inline: 1.5rem;
+    }
+    .form input {
+        width: 60%;
+    }
+    .form button {
+        font-size: 1rem;
+        width: 30%;
+    }
+    .form input::placeholder {
+        font-size: 1rem;
+    }
+    .image {
+        width: 35vw;
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+    footer {
+  
+        gap: 2rem;
+    }
+    .media {
+        gap: 1.2rem;
+    }
+    .media i {
+        font-size: 0.8rem;
+        border: 1px solid var(--hoverBlue);
+        border-radius: 50%;
+        padding: 0.5rem;
+    
+    }
+}
