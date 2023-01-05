@@ -22,7 +22,6 @@ img, video, svg, video {
     display: block;
     max-width: 100%;
 }
-
 :root {
     --blue: hsl(223, 87%, 63%);
     --hoverBlue: #c2d3ff;
@@ -38,14 +37,11 @@ img, video, svg, video {
     justify-content: center;
     align-items: center;
 }
-
-
 body {
     
     font-family: var(--font);
 }
 .container {
-
     height: 100%;
     flex-direction: column;  
 }
@@ -53,7 +49,6 @@ body {
     margin-top: 8rem;
     width: 5.5rem;
 }
-
 .title {
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -75,34 +70,60 @@ body {
     margin-bottom: 3rem;
     color: var(--veryDarkBlue);
 }
-
-.form {
-    flex-direction: column;
-    gap: 0.5rem;
+form {
+    margin: 0 auto;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;  
+    max-width: 80%;
 }
-.form input,
-.form button {
+input,
+button {
     width: 75vw;
     padding-block: 1.3rem;
     padding-inline: 2rem;
     border-radius: 50px;
-    
     font-weight: 300;
-    
 }
-.form input {
-    border: 1px solid var(--hoverBlue);
+input {
+    border: 2px solid var(--hoverBlue);
+    outline: none;
 }
-.after {  
-    margin-bottom: 2rem;
+input:hover, input:focus-visible {
+    border: 2px solid var(--blue)
 }
-
-
-.form input::placeholder {
+input + span {
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+input:invalid {
+    border: 2px solid var(--errorRed);
+}
+input:invalid + span {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 300ms ease opacity 300ms ease ;
+  }
+input:valid + span {
+    opacity: 0;
+    transform: translateY(-1rem);
+    transition: transform 300ms ease, opacity 300ms ease ;
+}
+.error {  
+    display: block;
+    padding-bottom: 1rem;
+    font-style: oblique;
+    color: var(--errorRed);
+    opacity: 0;   
+}
+input::placeholder {
     color: var(--gray);
     font-size: 1.2rem;
 }
-.form button {
+button {
     border: none;
     background-color: var(--blue);
     color: white;
@@ -111,12 +132,11 @@ body {
     box-shadow: 0px 10px 20px 0px var(--hoverBlue);
 }
 button:hover {
-    background-color: hsla(223, 87%, 63%, 0.673);;
+    background-color: hsla(223, 87%, 63%, 0.378);
     cursor: pointer;
     transition: 300ms ease-in-out;
 }
-.image {
-    
+.image {   
     margin-top: 7rem;
     margin-bottom: 12rem;
     max-width: 80%;
@@ -137,7 +157,6 @@ footer {
     border-radius: 50%;
     padding: 0.9rem;
 }
-
 .media i:first-child {
     aspect-ratio: 1/0.6;
     text-align: center;
@@ -146,7 +165,6 @@ footer {
     background-color: var(--blue);
     color: white;
 }
-
 @media screen and (min-width: 62em) {
     .logo {
         margin-top: 5rem;
@@ -161,25 +179,31 @@ footer {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
-    .form {
-        flex-direction: row;
-        width: 35rem;
+    form {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 35rem;
+        justify-items: start;
     }
-    .form input,
-    .form button {
-        
+    form input,
+    form button {
         padding-block: 0.8rem;
         padding-inline: 1.5rem;
     }
-    .form input {
-        width: 60%;
+    form input {
+        grid-column: 1/3;
+        width: 100%;
     }
-    .form button {
+    form button {
         font-size: 1rem;
-        width: 30%;
+        width: 100%;
     }
-    .form input::placeholder {
+    form input::placeholder {
         font-size: 1rem;
+    }
+    .error {
+        text-indent: 2rem;
+        grid-column: 1/3;
+        grid-row: 2/2;
     }
     .image {
         width: 35vw;
@@ -187,7 +211,6 @@ footer {
         margin-bottom: 2.5rem;
     }
     footer {
-  
         gap: 2rem;
     }
     .media {
@@ -198,6 +221,5 @@ footer {
         border: 1px solid var(--hoverBlue);
         border-radius: 50%;
         padding: 0.5rem;
-    
     }
 }

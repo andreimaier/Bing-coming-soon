@@ -28,9 +28,16 @@
       <img class="logo" src="./images/logo.svg" alt="PING logo" />
       <h1 class="title">We are launching <span class="bold">soon!</span></h1>
       <h2 class="subtitle">Subscribe and get notified</h2>
-      <form class="form flex" action="get">
-        <input placeholder="Your email address..." type="email" />
-        <span class="after">Please provide a valid email address</span>
+      <form id="form" novalidate>
+        <!-- novalidate -->
+        <input
+          placeholder="Your email address..."
+          type="email"
+          name="email"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+        />
+        <!-- autocomplete="email" -->
+        <span class="error">Please provide a valid email address</span>
         <button type="submit">Notify Me</button>
       </form>
       <img
