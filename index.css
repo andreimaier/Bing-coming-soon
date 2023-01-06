@@ -95,15 +95,14 @@ input:hover, input:focus-visible {
     border: 2px solid var(--blue)
 }
 .error {  
-    opacity: 0;
-    transform: translateY(-1rem);
-    transition: transform 300ms ease, opacity 300ms ease;
     display: block;
     padding-bottom: 1rem;
     font-style: oblique;
     font-size: 0.7rem;
     color: var(--errorRed);
     opacity: 0;   
+    transform: translateY(-1rem);
+    transition: transform 300ms ease, opacity 300ms ease;
 }
 
 input::placeholder {
