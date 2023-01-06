@@ -3,12 +3,12 @@ const email = document.querySelector('input')
 const error = document.querySelector('.error')
 
 function errorOn() {
-    
     error.style.opacity= '1';
     error.style.transform = 'translateY(0)';
     error.style.transition = 'transform 300ms ease, opacity 300ms ease';
     email.style.border = '2px solid var(--errorRed)';
 }
+
 form.addEventListener('submit', (e) => {
     if(email.value == "" || email.value == null) {
         errorOn();
@@ -21,16 +21,13 @@ form.addEventListener('submit', (e) => {
         document.querySelector('.error').textContent = "Please provide a valid email"
     }
 })  
+
 email.addEventListener('input', () => {
     email.style.border = '2px solid var(--blue)';
     error.style.opacity= '0';
     error.style.transform = 'translateY(-1rem)';
     error.style.transition = 'transform 300ms ease, opacity 300ms ease';
 })
-
-
-
-
 
 
 
