@@ -29,14 +29,13 @@
       <h1 class="title">We are launching <span class="bold">soon!</span></h1>
       <h2 class="subtitle">Subscribe and get notified</h2>
       <form id="form" novalidate>
-        <!-- novalidate -->
         <input
           placeholder="Your email address..."
           type="email"
           name="email"
+          autocomplete="email"
           pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}"
         />
-        <!-- autocomplete="email" -->
         <span class="error">Please provide a valid email address</span>
         <button type="submit">Notify Me</button>
       </form>
