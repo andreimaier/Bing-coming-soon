@@ -70,10 +70,6 @@ function errorOn() {
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Useful resources
 
 - [preventDefault() on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) - This is a pretty complex article, but it helped me understand why it is useful to have this function.
