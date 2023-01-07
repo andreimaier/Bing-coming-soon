@@ -28,6 +28,3 @@ email.addEventListener('input', () => {
     error.style.transform = 'translateY(-1rem)';
     error.style.transition = 'transform 300ms ease, opacity 300ms ease';
 })
-
-
-
