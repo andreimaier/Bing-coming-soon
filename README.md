@@ -85,4 +85,4 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ## Acknowledgments
 
-I learned a lot from looking at some of my favorite members ✨ (@vcarames)[https://www.frontendmentor.io/profile/vcarames] of the _FEM community_ ✨ **Thank you!** ✨
+I learned a lot from looking at some of my favorite members ✨ [@vcarames](https://www.frontendmentor.io/profile/vcarames) of the _FEM community_ ✨ **Thank you!** ✨
